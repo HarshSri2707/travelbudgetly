@@ -70,57 +70,60 @@ export const HeroSection = () => {
           </MotionDiv>
 
           {/* Right Image Grid */}
-          <MotionDiv
-            initial={!prefersReducedMotion && { opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative pb-12 lg:pb-0"
-          >
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="rounded-2xl overflow-hidden shadow-xl h-64">
-                  <Image
-                    src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=600&q=80"
-                    alt="Rajasthan"
-                    eager
-                  />
-                </div>
-                <div className="rounded-2xl overflow-hidden shadow-xl h-48">
-                  <Image
-                    src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=600&q=80"
-                    alt="Kerala"
-                  />
-                </div>
-              </div>
-              <div className="space-y-4 pt-8">
-                <div className="rounded-2xl overflow-hidden shadow-xl h-48">
-                  <Image
-                    src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=600&q=80"
-                    alt="Himachal"
-                  />
-                </div>
-                <div className="rounded-2xl overflow-hidden shadow-xl h-64">
-                  <Image
-                    src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80"
-                    alt="Ladakh"
-                  />
-                </div>
-              </div>
-            </div>
+        {/* Right Image Grid */}
+<MotionDiv
+  initial={!prefersReducedMotion && { opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.6, delay: 0.2 }}
+  className="relative pb-16 lg:pb-0"
+>
+  <div className="grid grid-cols-2 gap-4">
+    {/* Column 1 */}
+    <div className="space-y-4">
+      <Image
+        src="https://images.unsplash.com/photo-1477587458883-47145ed94245?w=800&q=80"
+        alt="Rajasthan"
+        eager
+        className="h-56 sm:h-64 rounded-2xl shadow-xl"
+      />
 
-            {/* Floating Card - Fixed Position */}
-            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-white rounded-xl shadow-2xl p-4 w-[90%] max-w-xs z-10">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
-                  ✓
-                </div>
-                <div>
-                  <p className="font-semibold text-gray-900">Verified Partners</p>
-                  <p className="text-sm text-gray-600">100% Safe & Secure</p>
-                </div>
-              </div>
-            </div>
-          </MotionDiv>
+      <Image
+        src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?w=800&q=80"
+        alt="Kerala"
+        className="h-40 sm:h-48 rounded-2xl shadow-xl"
+      />
+    </div>
+
+    {/* Column 2 */}
+    <div className="space-y-4 pt-6 sm:pt-10">
+      <Image
+        src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?w=800&q=80"
+        alt="Himachal"
+        className="h-40 sm:h-48 rounded-2xl shadow-xl"
+      />
+
+      <Image
+        src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
+        alt="Ladakh"
+        className="h-56 sm:h-64 rounded-2xl shadow-xl"
+      />
+    </div>
+  </div>
+
+  {/* Floating Card */}
+  <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 bg-white rounded-xl shadow-2xl p-4 w-[90%] max-w-xs z-10">
+    <div className="flex items-center gap-3">
+      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold text-xl">
+        ✓
+      </div>
+      <div>
+        <p className="font-semibold text-gray-900">Verified Partners</p>
+        <p className="text-sm text-gray-600">100% Safe & Secure</p>
+      </div>
+    </div>
+  </div>
+</MotionDiv>
+
         </div>
       </div>
     </section>
