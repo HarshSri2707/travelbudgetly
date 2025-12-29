@@ -8,15 +8,15 @@ const HomeRoute = lazy(() => import('./HomeRoute'))
 const AboutRoute = lazy(() => import('./AboutRoute'))
 const DestinationsRoute = lazy(() => import('./DestinationsRoute'))
 const DestinationDetailRoute = lazy(() => import('./DestinationDetailRoute'))
-// const TravelStyleRoute = lazy(() => import('./TravelStyleRoute'))
-// const OffbeatRoute = lazy(() => import('./OffbeatRoute'))
-// const PopularPlacesRoute = lazy(() => import('./PopularPlacesRoute'))
-// const TravelGuideRoute = lazy(() => import('./TravelGuideRoute'))
-// const PackagesRoute = lazy(() => import('./PackagesRoute'))
-// const OffersRoute = lazy(() => import('./OffersRoute'))
-// const BlogsRoute = lazy(() => import('./BlogsRoute'))
-// const BlogDetailRoute = lazy(() => import('./BlogDetailRoute'))
-// const ContactRoute = lazy(() => import('./ContactRoute'))
+const TravelStyleRoute = lazy(() => import('./TravelStyleRoute'))
+const OffbeatRoute = lazy(() => import('./OffbeatRoute'))
+const PopularPlacesRoute = lazy(() => import('./PopularPlacesRoute'))
+const TravelGuideRoute = lazy(() => import('./TravelGuideRoute'))
+const PackagesRoute = lazy(() => import('./PackagesRoute'))
+const OffersRoute = lazy(() => import('./OffersRoute'))
+const BlogsRoute = lazy(() => import('./BlogsRoute'))
+const BlogDetailRoute = lazy(() => import('./BlogDetailRoute'))
+const ContactRoute = lazy(() => import('./ContactRoute'))
 
 // Page-level skeleton
 const PageSkeleton = () => (
@@ -37,11 +37,12 @@ export const AppRoutes = () => {
       <Routes>
         <Route path={ROUTES.HOME} element={<HomeRoute />} />
         <Route path={ROUTES.ABOUT} element={<AboutRoute />} />
-       <Route path={ROUTES.DESTINATIONS} element={<DestinationsRoute />} />
+        <Route path={ROUTES.DESTINATIONS} element={<DestinationsRoute />} />
         <Route path={ROUTES.DESTINATION_DETAIL} element={<DestinationDetailRoute />} />
-          {/*<Route path={ROUTES.TRAVEL_STYLE} element={<TravelStyleRoute />} />
+        <Route path={ROUTES.TRAVEL_STYLE} element={<TravelStyleRoute />} />
         <Route path={ROUTES.TRAVEL_STYLE_DETAIL} element={<TravelStyleRoute />} />
         <Route path={ROUTES.OFFBEAT} element={<OffbeatRoute />} />
+        <Route path="/offbeat-travel/:slug" element={<OffbeatRoute />} />
         <Route path={ROUTES.POPULAR_PLACES} element={<PopularPlacesRoute />} />
         <Route path={ROUTES.TRAVEL_GUIDE} element={<TravelGuideRoute />} />
         <Route path={ROUTES.PACKAGES} element={<PackagesRoute />} />
@@ -50,7 +51,7 @@ export const AppRoutes = () => {
         <Route path={ROUTES.BLOGS} element={<BlogsRoute />} />
         <Route path={ROUTES.BLOG_DETAIL} element={<BlogDetailRoute />} />
         <Route path={ROUTES.BLOG_CATEGORY} element={<BlogsRoute />} />
-        <Route path={ROUTES.CONTACT} element={<ContactRoute />} /> */}
+        <Route path={ROUTES.CONTACT} element={<ContactRoute />} />
       </Routes>
     </Suspense>
   )
