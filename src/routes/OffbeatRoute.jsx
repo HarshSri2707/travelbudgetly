@@ -1,3 +1,3 @@
-import { OffbeatView } from "../modules/offbeat/OffBeatView";
+import { OffbeatView } from "../modules/offbeat/OffbeatView";
 
 export default () => <OffbeatView />
