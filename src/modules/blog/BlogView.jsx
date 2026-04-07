@@ -368,7 +368,7 @@ export const BlogView = () => {
   const sideBlogs = blogs.slice(1, 5)
 
   return (
-    <div className="min-h-screen bg-white pt-20 pb-20">
+    <div className="min-h-screen bg-white pt-24 pb-20">
       <div className="max-w-[1100px] mx-auto px-6">
         
         {/* --- Header --- */}
@@ -386,7 +386,7 @@ export const BlogView = () => {
           <div className="flex flex-col md:flex-row border border-slate-100 rounded-[20px] overflow-hidden shadow-sm h-auto md:h-[380px]">
             
             {/* Main Featured (Left) */}
-            <Link to={`/blog/${featured?.slug}`} className="relative w-full md:w-[65%] group overflow-hidden">
+            <Link to={`/blogs/${featured?.slug}`} className="relative w-full md:w-[65%] group overflow-hidden">
               <img 
                 src={featured?.image} 
                 alt="featured" 

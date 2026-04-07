@@ -42,22 +42,22 @@
 
   @keyframes fadeIn {
     from { opacity: 0; }
-    to { opacity: 1; }
+    to   { opacity: 1; }
   }
 
   @keyframes slideUp {
     from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    to   { opacity: 1; transform: translateY(0);    }
   }
 
   @keyframes scaleIn {
     from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
+    to   { opacity: 1; transform: scale(1);    }
   }
 
   @keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+    0%   { transform: translateX(-100%); }
+    100% { transform: translateX(100%);  }
   }
 }
 
@@ -91,16 +91,15 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
-
   .line-clamp-1 { -webkit-line-clamp: 1; }
   .line-clamp-2 { -webkit-line-clamp: 2; }
   .line-clamp-3 { -webkit-line-clamp: 3; }
 
   /* Animations */
-  .animate-fade-in { animation: var(--animate-fade-in); }
+  .animate-fade-in  { animation: var(--animate-fade-in);  }
   .animate-slide-up { animation: var(--animate-slide-up); }
   .animate-scale-in { animation: var(--animate-scale-in); }
-  .animate-shimmer { animation: var(--animate-shimmer); }
+  .animate-shimmer  { animation: var(--animate-shimmer);  }
 
   /* Stagger Delays */
   .stagger-1 { animation-delay: 0.1s; }
@@ -115,7 +114,6 @@
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
                 box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-
   .card-hover:hover {
     transform: translateY(-8px);
     box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1),
@@ -124,16 +122,12 @@
 
   /* Image Hover Zoom */
   .image-zoom-hover { overflow: hidden; }
-
   .image-zoom-hover img {
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
+  .image-zoom-hover:hover img { transform: scale(1.08); }
 
-  .image-zoom-hover:hover img {
-    transform: scale(1.08);
-  }
-
-  /* Glass Effect */
+  /* Glass */
   .glass {
     background: rgba(255,255,255,0.85);
     backdrop-filter: blur(12px);
@@ -146,14 +140,25 @@
   }
 
   /* Performance */
-  .will-animate {
-    will-change: transform, opacity;
-  }
-
+  .will-animate   { will-change: transform, opacity; }
   .gpu-accelerated {
     transform: translateZ(0);
     backface-visibility: hidden;
     perspective: 1000px;
+  }
+
+  /* ── Scrollbar hide ─────────────────────────────────────────────
+     Applied globally so any element using overflow-x-auto / 
+     overflow-y-auto won't show a scrollbar.
+     Used by: FeaturedDestinations slider, PopularPackages slider,
+     filter chip rows, BlogView tabs, etc.
+  ─────────────────────────────────────────────────────────────── */
+  .scrollbar-hide {
+    -ms-overflow-style: none;   /* IE / Edge */
+    scrollbar-width: none;      /* Firefox */
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;              /* Chrome / Safari / Opera */
   }
 }
 
@@ -164,13 +169,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
+/* ── Main scrollbar (page-level) ─────────────────────────────── */
+::-webkit-scrollbar       { width: 10px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #0ea5e9, #f97316);
   border-radius: 5px;
@@ -191,13 +192,20 @@ html {
   outline-offset: 2px;
 }
 
+/* ── Override focus outline for inputs inside pill/card search bars
+   so the browser default ring doesn't cut through rounded corners ── */
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  *, *::before, *::after {
+    animation-duration:       0.01ms !important;
+    animation-iteration-count: 1    !important;
+    transition-duration:      0.01ms !important;
   }
 }

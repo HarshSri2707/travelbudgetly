@@ -603,8 +603,8 @@ export const HeroSection = () => {
       >
         
         {/* ── Search Bar Overlay ── */}
-        <div className="absolute inset-0 z-10 flex items-center justify-center px-4">
-          
+        <div className="absolute inset-0 z-10 flex items-center justify-center md:px-4 pt-4 ">
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -612,7 +612,7 @@ export const HeroSection = () => {
             className="w-full max-w-5xl"
           >
             {/* Unified Search Bar - Same design for Mobile, Tablet, and Desktop */}
-            <div className="flex items-center bg-white/95 backdrop-blur-sm rounded-full shadow-[0_10px_40px_rgba(0,0,0,0.3)] p-1 md:p-2 border border-white/20">
+            <div className="flex items-center bg-white/95 backdrop-blur-sm rounded-full shadow-[0_10px_40px_rgba(0,0,0,0.3)] p-1  md:p-2 border border-white/20">
               
               {/* Location Dropdown */}
               <div className="flex items-center gap-1 md:gap-2 px-3 md:px-6 py-2 md:py-4 border-r border-gray-200 shrink-0">
