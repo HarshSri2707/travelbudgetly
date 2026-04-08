@@ -564,7 +564,7 @@ const useResponsiveImage = () => {
       const w = window.innerWidth
       
       let src = HERO_IMAGE.mobile
-      if (w >= 2560) src = HERO_IMAGE.desktop // Laptop/4K
+      if (w >= 2560) src = HERO_IMAGE.laptop // Laptop/4K
       else if (w >= 1024) src = HERO_IMAGE.desktop // Macbook/Desktop
       else if (w >= 751) src = HERO_IMAGE.tablet // Tablet
       else src = HERO_IMAGE.mobile // Mobile
@@ -603,7 +603,7 @@ export const HeroSection = () => {
       >
         
         {/* ── Search Bar Overlay ── */}
-        <div className="absolute inset-0 z-10 flex items-center justify-center md:px-4 pt-4 ">
+        <div className="absolute inset-0 z-10 flex items-center justify-center md:px-4 pt-8 ">
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
