@@ -181,7 +181,7 @@ export const WhyChooseUs = () => {
 
         {/* heading */}
         <div className="relative text-center mb-10">
-          <span className="absolute inset-x-0 top-1/2 -translate-y-1/2 text-[32px] md:text-[80px] font-black tracking-widest select-none pointer-events-none text-blue-900/[0.80] whitespace-nowrap">
+          <span className="absolute inset-x-0 top-1/2 -translate-y-1/2 text-[34px] md:text-[80px] font-black tracking-widest select-none pointer-events-none text-blue-900/[0.80] whitespace-nowrap">
             WHY CHOOSE US
           </span>
           <h2 className="relative font-display font-bold text-2xl md:text-3xl text-gray-900">
