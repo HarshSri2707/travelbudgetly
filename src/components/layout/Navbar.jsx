@@ -283,7 +283,7 @@ export const Navbar = () => {
 
           {/* Desktop CTA Button - Heavier Font */}
           <div className="hidden lg:block">
-            <Link to="/contact">
+            <Link to="/destinations">
               <button className="bg-[#2C74FF] hover:bg-[#1C64EF] text-white font-bold px-8 py-3.5 rounded-full text-[14px] transition-all flex items-center gap-2 shadow-lg shadow-blue-100 hover:shadow-blue-200 active:scale-95">
                 Plan your Trip
                 <svg className="w-4 h-4 rotate-[-45deg]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -329,7 +329,7 @@ export const Navbar = () => {
                 </Link>
               ))}
               
-              <Link to="/destination" className="mt-2">
+              <Link to="/destinations" className="mt-2">
                 <button className="w-full bg-[#2C74FF] text-white font-extrabold py-5 rounded-2xl text-[16px] flex items-center justify-center gap-3 shadow-xl shadow-blue-100">
                   Plan your Trip
                   <svg className="w-5 h-5 rotate-[-45deg]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
