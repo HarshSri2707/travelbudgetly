@@ -342,7 +342,7 @@ export const DestinationDetailView = () => {
 
   return (
     <div className="min-h-screen pt-20 pb-16 bg-white">
-      <div className="max-w-5xl mx-auto px-4 md:px-6">
+      <div className="max-w-6xl mx-auto px-4 md:px-6">
 
         {/* ── Breadcrumb ── */}
         <div className="flex items-center gap-1.5 text-xs text-gray-400 mb-4">

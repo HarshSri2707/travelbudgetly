@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { GridSkeleton } from '../components/ui/Skeleton'
 import { ROUTES } from '../constants/routes'
+import ScrollToTop from '../components/common/ScrollToTop'
 
 // Lazy load all route components
 const HomeRoute = lazy(() => import('./HomeRoute'))
@@ -34,6 +35,10 @@ const PageSkeleton = () => (
 export const AppRoutes = () => {
   return (
     <Suspense fallback={<PageSkeleton />}>
+
+      {/* ✅ Scroll reset on every route change */}
+      <ScrollToTop />
+
       <Routes>
         <Route path={ROUTES.HOME} element={<HomeRoute />} />
         <Route path={ROUTES.ABOUT} element={<AboutRoute />} />
@@ -53,6 +58,7 @@ export const AppRoutes = () => {
         <Route path={ROUTES.BLOG_CATEGORY} element={<BlogsRoute />} />
         <Route path={ROUTES.CONTACT} element={<ContactRoute />} />
       </Routes>
+
     </Suspense>
   )
 }
