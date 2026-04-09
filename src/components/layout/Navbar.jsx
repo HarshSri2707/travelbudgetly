@@ -329,7 +329,7 @@ export const Navbar = () => {
                 </Link>
               ))}
               
-              <Link to="/contact" className="mt-2">
+              <Link to="/destination" className="mt-2">
                 <button className="w-full bg-[#2C74FF] text-white font-extrabold py-5 rounded-2xl text-[16px] flex items-center justify-center gap-3 shadow-xl shadow-blue-100">
                   Plan your Trip
                   <svg className="w-5 h-5 rotate-[-45deg]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
