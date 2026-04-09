@@ -232,7 +232,7 @@ const stagger = {
 
 /* ── Package Card ─────────────────────────────────────────────── */
 const PackageCard = ({ pkg }) => (
-  <div className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-shadow duration-300 overflow-hidden group flex flex-col w-full h-full">
+  <div className="bg-white rounded-2xl  hover:shadow-xl transition-shadow duration-300 overflow-hidden group flex flex-col w-full h-full">
     {/* image */}
     <div className="relative h-44 overflow-hidden shrink-0">
       <img
