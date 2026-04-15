@@ -258,7 +258,7 @@ export const LatestBlogs = () => {
           <div className="relative  px-4">
             <span className="
               absolute inset-x-0 top-1/2 -translate-y-1/2
-               text-[38px] xs:text-[48px] sm:text-[56px] md:text-[64px]
+               text-[38px] xs:text-[48px] sm:text-[56px] md:text-[68px]
               font-black tracking-[0.1em]
               select-none pointer-events-none
               text-blue-900/[0.1] uppercase whitespace-nowrap
